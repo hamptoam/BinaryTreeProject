@@ -8,14 +8,13 @@ namespace BinaryTree
 {
     public class Node
     {
-        public int data;
         public int value;
-        public Node leftNode;
-        public Node rightNode;
+        public Node left { get; set; }
+        public Node right { get; set; }
 
         public Node(int value)
         {
-            data = value;
+            this.value = value;
         }
   
     }

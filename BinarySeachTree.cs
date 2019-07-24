@@ -6,63 +6,102 @@ using System.Threading.Tasks;
 
 namespace BinaryTree
 {
-   public class BinarySeachTree
+    public class BinarySeachTree
     {
+        public Node parent;
         public Node root;
+        public Node child;
+        public Node right;
+        public Node left;
+        public int newNode;
         public int value;
-        public int i; 
+
 
 
         public BinarySeachTree()
         {
             root = null;
-            value = null;  
-            i = value;
+
+        }
+
+        public Node Add(Node newNode)
+        {
+
+            
+
+            if (root == null)
+            {
+                root = newNode;
+
+                //Node child = new Node(value);
+
+            }
+            parent = root;
+            while (true)
+            {
+
+                //newNode = child;
+
+                if (parent.value > newNode.value)
+                {
+
+                    if (parent.left == null)
+                    {
+                        parent.left = newNode;
+                    }
+                    else
+                    {
+                        parent = parent.left;
+                    }
+
+                }
+
+                else if (parent.value < newNode.value)
+                {
+                    if (parent.left == null)
+                    {
+                        parent.right = newNode;
+                    }
+
+                    else
+                    {
+                        parent.left = newNode;
+                    }
+                }
+             
+            }
             
         }
 
-        public Node Add(Node node)
+        public Node Search(Node node)
         {
+            
+
             if (node == null)
             {
-                Node root = new Node(i);
-                 
+                return null;
             }
 
-            else (node.value <  data )
+
+            else if (node.value == value)
             {
-                Add(node.rightNode, i);
+                return node;
             }
 
-            else if (node.value > data)
+            else if (node.value < value)
             {
-                Add(node.leftNode, i);
+                 node = right;
             }
 
-            return root;
-        }
-           public Node Search(Node node, int data)
-        {
-                if (node == null)
-                {
-                    return null;
-                }
 
-                else if (node.value == data)
-                {
-                    return node;
-                }
-
-                else if (node.value < data)
-                {
-                    return (node.rightNode);
-                }
-
-                else if (node.value > data)
-                {
-                    return (node.leftNode);
-                }
+            else if (node.value > value)
+            {
+                
+            }
             return node;
         }
     }
 }
+        
+    
+
