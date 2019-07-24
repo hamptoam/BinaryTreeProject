@@ -8,22 +8,16 @@ namespace BinaryTree
 {
     public class Node
     {
-        public int integer;
-        public int i;
+        public int data;
+        public int value;
         public Node leftNode;
         public Node rightNode;
-        public Node root;
 
         public Node(int value)
         {
-            integer = value;
-            i = value;
-            leftNode = null;
-            rightNode = null;
-
-
+           
         }
-        public Node Add(Node node, int data)
+  /*      public Node Add(Node node, int data)
         {
             if (node == null)
             {
@@ -41,6 +35,7 @@ namespace BinaryTree
 
             return root;
         }
+        */
     }
 }
     
