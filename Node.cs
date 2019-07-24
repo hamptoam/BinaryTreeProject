@@ -15,27 +15,9 @@ namespace BinaryTree
 
         public Node(int value)
         {
-           
+            data = value;
         }
-  /*      public Node Add(Node node, int data)
-        {
-            if (node == null)
-            {
-                node = new Node(data);
-            }
-
-            else if (node.integer > data)
-            {
-                Add(root.leftNode, i);
-            }
-            else if (node.integer < data)
-            {
-                Add(root.rightNode, i);
-            }
-
-            return root;
-        }
-        */
+  
     }
 }
     

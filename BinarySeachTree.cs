@@ -9,7 +9,6 @@ namespace BinaryTree
    public class BinarySeachTree
     {
         public Node root;
-        public int count;
         public int value;
         public int i; 
 
@@ -17,21 +16,20 @@ namespace BinaryTree
         public BinarySeachTree()
         {
             root = null;
-            count = 0;
-            value = 0;
-            i = value; 
+            value = null;  
+            i = value;
             
         }
 
-        public Node Add(Node node, int data)
+        public Node Add(Node node)
         {
             if (node == null)
             {
-                node = new Node(data);
-
+                Node root = new Node(i);
+                 
             }
 
-            else if (node.value < data)
+            else (node.value <  data )
             {
                 Add(node.rightNode, i);
             }
